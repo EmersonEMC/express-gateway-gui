@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "express-gateway-gui"
+    }
+  },
+  "defaultProject": "express-gateway-gui",
+  "cli": {
+    "analytics": "1da4a597-e7be-4490-a699-2c6c6388ee53"
+  }
 }
