@@ -21,6 +21,7 @@
     "@angular/router": "~10.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
+    "uikit": "^3.5.5-dev.f97109e60",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

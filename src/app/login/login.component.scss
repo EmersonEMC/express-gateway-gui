@@ -1,0 +1,65 @@
+.login {
+  position: absolute;
+  max-width: 320px;
+  width: 90%;
+  top: 46%;
+  left: 50%;
+  color: #fff;
+  padding: 40px;
+  background-color: #1d1d1d;
+  transform: translate(-50%, -54%);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+
+  .login__header {
+    text-align: center;
+    padding: 15px 0 40px;
+    color: #2980ef;
+  }
+
+  form {
+    input {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #434a52;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+      font: 400 13.3333px Roboto;
+    }
+
+    .uk-button-primary {
+      background: #214a80;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      outline: none;
+      margin-top: 20px;
+
+      &:hover {
+        background: #214a80;
+        outline: none;
+      }
+      &:active {
+        background: #214a80;
+        outline: none;
+        transform: translateY(1px);
+      }
+    }
+
+    .error {
+      position: absolute;
+      color: #f0506e;
+      font-size: 9px;
+      bottom: -16px;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,9 @@
+main {
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100vw - 250px);
+  margin-left: 250px;
+  min-height: calc(100vh - 60px);
+  margin-top: 36px;
+  width: auto;
+  border: 1px solid green;
+}
