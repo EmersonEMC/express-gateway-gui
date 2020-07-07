@@ -27,12 +27,15 @@
     li {
       a {
         display: flex;
+        align-items: center;
         padding: 5px 10px;
         text-decoration: none;
         outline: none;
-        color: white;
+        height: 48px;
+        // color: white;
+        color: rgba(255, 255, 255, 0.65);
         text-transform: uppercase;
-        border-bottom: 1px solid rgba(158, 158, 158, 0.1);
+        // border-bottom: 1px solid rgba(158, 158, 158, 0.1);
 
         &:focus {
           outline: none;
@@ -40,8 +43,10 @@
 
         &:hover {
           // background: #3c4042;
-          background: #ffffff;
-          color: #606368;
+          // background: #ffffff;
+          background: rgba(255, 255, 255, 0.04);
+          // color: #606368;
+          color: #ffffff;
         }
       }
     }
