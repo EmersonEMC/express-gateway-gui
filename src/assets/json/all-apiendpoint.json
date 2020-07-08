@@ -1,0 +1,22 @@
+[
+  {
+    "login-api": {
+      "host": "*",
+      "paths": "/api/auth/*",
+      "methods": [
+        "POST",
+        "OPTIONS"
+      ]
+    },
+    "usuario-api": {
+      "host": "*",
+      "paths": "/api/user/*",
+      "methods": [
+        "POST",
+        "GET",
+        "PUT",
+        "OPTIONS"
+      ]
+    }
+  }
+]

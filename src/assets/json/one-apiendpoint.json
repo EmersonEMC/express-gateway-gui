@@ -1,0 +1,10 @@
+{
+  "login-api": {
+    "host": "*",
+    "paths": "/api/auth/*",
+    "methods": [
+      "POST",
+      "OPTIONS"
+    ]
+  }
+}

@@ -15,6 +15,10 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
       },
       {
+        path: 'apiendpoint',
+        loadChildren: () => import('./api-endpoint/api-endpoint.module').then(m => m.ApiEndpointModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
