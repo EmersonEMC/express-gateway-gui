@@ -1,6 +1,6 @@
 [
   {
-    "login-api": {
+    "login": {
       "host": "*",
       "paths": "/api/auth/*",
       "methods": [
@@ -8,7 +8,7 @@
         "OPTIONS"
       ]
     },
-    "usuario-api": {
+    "usuario": {
       "host": "*",
       "paths": "/api/user/*",
       "methods": [

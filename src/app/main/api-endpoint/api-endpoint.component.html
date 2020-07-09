@@ -1,28 +1,43 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="host">
-    <mat-header-cell *matHeaderCellDef> host </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.host}} </mat-cell>
-  </ng-container>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource">
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="paths">
-    <mat-header-cell *matHeaderCellDef> paths </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.paths}} </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> API </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="methods">
-    <mat-header-cell *matHeaderCellDef> methods </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.methods}} </mat-cell>
-  </ng-container>
+    <ng-container matColumnDef="host">
+      <mat-header-cell *matHeaderCellDef> HOST </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.host }} </mat-cell>
+    </ng-container>
 
-  <!-- Symbol Column -->
-  <!-- <ng-container matColumnDef="symbol">
-    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-  </ng-container> -->
+    <ng-container matColumnDef="paths">
+      <mat-header-cell *matHeaderCellDef> PATHS </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.paths }} </mat-cell>
+    </ng-container>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+    <ng-container matColumnDef="methods">
+      <mat-header-cell *matHeaderCellDef> METHODS </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.methods | json }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> ACTIONS </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a mat-icon-button color="primary" href="#">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a mat-icon-button color="warn" href="#">
+          <mat-icon>delete_forever</mat-icon>
+        </a>
+        <!-- <a mat-stroked-button href="https://www.google.com/">EDIT</a>
+        <a mat-stroked-button color="warn" href="https://www.google.com/">DELETE</a> -->
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
